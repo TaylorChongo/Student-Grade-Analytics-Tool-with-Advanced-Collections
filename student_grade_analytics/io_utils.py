@@ -15,7 +15,7 @@ def load_students(path: Union[str, Path]) -> List[Student]:
     students_by_id: Dict[str, Student] = {}
 
     try:
-        with open(path, newline="", encoding="utf-8") as file:
+        with open(path, newline="", encoding="utf-8") as file: 
             reader = csv.DictReader(file)
             for row in reader:
                 student_id = row["student_id"]

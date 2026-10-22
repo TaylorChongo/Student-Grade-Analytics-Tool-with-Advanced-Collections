@@ -57,7 +57,7 @@ class RollingAverage:
         """Add a new value."""
         self.values.append(value)
 
-    def average(self) -> Optional[float]:
+    def average(self) -> Optional[float]: 
         """Return the average of the stored values, or None if empty."""
         if not self.values:
             return None
