@@ -1,0 +1,23 @@
+student_id,name,major,year,course_code,course_name,credits,semester,score
+S001,Ama,Math,2,MATH101,Calculus,3,2025-S1,88
+S001,Ama,Math,2,CS101,Programming,4,2025-S2,92
+S001,Ama,Math,2,PHY101,Physics,3,2025-S2,95
+S002,Kofi,Biology,1,BIO101,Cell Biology,3,2025-S1,74
+S002,Kofi,Biology,1,ENG101,English,2,2025-S2,68
+S003,Esi,Math,3,MATH101,Calculus,3,2025-S1,97
+S003,Esi,Math,3,PHY101,Physics,3,2025-S2,91
+S004,Yaw,Computer Science,2,CS101,Programming,4,2025-S1,55
+S004,Yaw,Computer Science,2,MATH101,Calculus,3,2025-S2,63
+S004,Yaw,Computer Science,2,ENG101,English,2,2025-S2,71
+S005,Abena,Biology,4,BIO101,Cell Biology,3,2025-S1,82
+S005,Abena,Biology,4,ENG101,English,2,2025-S2,85
+S006,Kwame,Computer Science,1,CS101,Programming,4,2025-S1,79
+S006,Kwame,Computer Science,1,MATH101,Calculus,3,2025-S2,84
+S007,Akosua,Math,1,MATH101,Calculus,3,2025-S1,45
+S007,Akosua,Math,1,ENG101,English,2,2025-S2,62
+S008,Kojo,Biology,3,BIO101,Cell Biology,3,2025-S1,90
+S008,Kojo,Biology,3,PHY101,Physics,3,2025-S2,77
+S009,Adwoa,Computer Science,4,CS101,Programming,4,2025-S1,99
+S009,Adwoa,Computer Science,4,PHY101,Physics,3,2025-S2,88
+S010,Kweku,Biology,2,BIO101,Cell Biology,3,2025-S1,58
+S010,Kweku,Biology,2,ENG101,English,2,2025-S2,66
