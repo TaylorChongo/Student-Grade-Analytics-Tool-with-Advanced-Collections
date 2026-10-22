@@ -1,14 +1,14 @@
 """The structure of the JSON report."""
 
-from typing import Dict, TypedDict
+from typing import Dict, Optional, TypedDict
 
 
 class Statistics(TypedDict):
-    """Mean, median and mode of all scores."""
+    """Mean and median of all scores, and the most common letter grade."""
 
     mean: float
     median: float
-    mode: float
+    mode: str
 
 
 class Report(TypedDict):
@@ -18,4 +18,6 @@ class Report(TypedDict):
     grade_distribution: Dict[str, int]
     students_per_major: Dict[str, int]
     ranking: Dict[str, float]
+    percentiles: Dict[str, float]
+    trends: Dict[str, Optional[float]]
     statistics: Statistics
