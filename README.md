@@ -4,7 +4,6 @@ A command-line tool that reads student grades from a CSV file, calculates statis
 
 It is built with Python's advanced collections (`Counter`, `defaultdict`, `OrderedDict`, `deque`), `dataclasses` and `NamedTuple`, and type hints throughout (checked with `mypy --strict`).
 
-![Tool running](docs/screenshot.png)
 
 ---
 
@@ -12,9 +11,12 @@ It is built with Python's advanced collections (`Counter`, `defaultdict`, `Order
 
 Requires **Python 3.11+** (developed with 3.14).
 
+Repository: [Student-Grade-Analytics-Tool-with-Advanced-Collections](https://github.com/TaylorChongo/Student-Grade-Analytics-Tool-with-Advanced-Collections)
+
 ```bash
-git clone <repo-url>
-cd student-grade-analytics
+git clone <repo-link>
+
+cd Student-Grade-Analytics-Tool-with-Advanced-Collections
 
 python -m venv .venv
 # Windows
