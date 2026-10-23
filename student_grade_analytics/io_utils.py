@@ -3,7 +3,7 @@
 import csv
 import json
 from pathlib import Path
-from typing import Dict, List, Union
+from typing import Dict, Iterator, List, Union
 
 from student_grade_analytics.models import Course, Grade, Student
 from student_grade_analytics.reports import Report
@@ -46,6 +46,21 @@ def load_students(path: Union[str, Path]) -> List[Student]:
         return []
 
     return list(students_by_id.values())
+
+
+def iter_rows(path: Union[str, Path]) -> Iterator[Dict[str, str]]:
+    """Yield the CSV rows one at a time, so large files use little memory."""
+    path = Path(path)
+
+    try:
+        with open(path, newline="", encoding="utf-8") as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                yield row
+    except FileNotFoundError:
+        print(f"File not found: {path}")
+    except PermissionError:
+        print(f"No permission to read: {path}")
 
 
 def write_report(report: Report, path: Union[str, Path]) -> None:

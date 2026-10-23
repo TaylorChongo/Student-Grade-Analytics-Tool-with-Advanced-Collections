@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from typing import List
 
-from student_grade_analytics.io_utils import load_students, write_report
+from student_grade_analytics.io_utils import iter_rows, load_students, write_report
 from student_grade_analytics.models import Student
 from student_grade_analytics.reports import build_report
 
@@ -35,6 +35,22 @@ def test_load_small_csv(tmp_path: Path) -> None:
 
 def test_missing_file_returns_empty_list(tmp_path: Path) -> None:
     assert load_students(tmp_path / "missing.csv") == []
+
+
+def test_iter_rows_gives_one_row_at_a_time() -> None:
+    rows = iter_rows(SAMPLE_CSV)
+    first = next(rows)
+    assert first["name"] == "Ama"
+    assert first["score"] == "88"  # still text, straight from the CSV
+
+    count = 1
+    for _ in rows:
+        count += 1
+    assert count == 22
+
+
+def test_iter_rows_missing_file_gives_nothing(tmp_path: Path) -> None:
+    assert list(iter_rows(tmp_path / "missing.csv")) == []
 
 
 def test_write_report_creates_json(
